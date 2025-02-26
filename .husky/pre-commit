@@ -1,0 +1,4 @@
+npx lint-staged
+npm run arch:check
+npm run test
+npm run test:e2e
