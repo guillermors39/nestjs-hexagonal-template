@@ -24,7 +24,7 @@ beforeAll(async () => {
   process.env.MONGODB_DB_NAME = dbName;
 
   global.__TESTCONTAINERS__ = { startedContainer, connection };
-}, 10000);
+}, 25000);
 
 afterAll(async () => {
   await connection.connection().close();

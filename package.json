@@ -20,7 +20,7 @@
     "test:e2e": "jest --config ./test/e2e/jest-e2e.config.ts --passWithNoTests",
     "test:e2e:cov": "jest --config ./test/e2e/jest-e2e.config.ts --coverage",
     "arch:check": "depcruise src",
-    "prepare": "husky"
+    "prepare": "node .husky/install.mjs || true"
   },
   "dependencies": {
     "@muchosol/core": "^17.0.0",
