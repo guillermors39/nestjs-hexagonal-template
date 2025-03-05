@@ -1,4 +1,4 @@
-name: Node CI and Build/Push to ECR
+name: Check dependencies and integration
 
 on:
   push:
