@@ -5,7 +5,7 @@ import { TCreateUserDto } from 'src/users/domain/contracts/user.type';
 import { UserEntity } from 'src/users/domain/entities/user.entity';
 
 @Injectable()
-export class CreateUserHandler {
+export class CreateUserUseCase {
   constructor(
     @Inject(ICreateUserRepository)
     private readonly repository: ICreateUserRepository,

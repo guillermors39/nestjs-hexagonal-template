@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { CreateUserController } from './infrastructure/controllers';
-import { CreateUserHandler } from './application/handlers/create.user.handler';
+import { CreateUserUseCase } from './application/use-cases/create.user.use-case';
 import {
   ICreateUserRepository,
   IFindByEmailUserRepository,
@@ -12,7 +12,7 @@ import { CreateUserValidator } from './domain/validators/create.user.validator';
 import { ICreateUserValidationService } from './domain/contracts/user.services.interface';
 import { CreateUserValidationService } from './infrastructure/services/create.user.validation.service';
 
-const handlers = [CreateUserHandler];
+const useCases = [CreateUserUseCase];
 
 const repositories = [
   {
@@ -37,7 +37,7 @@ const mappers = [UserMapper];
 
 @Module({
   imports: [DatabaseModule],
-  providers: [...handlers, ...repositories, ...validators, ...mappers],
+  providers: [...useCases, ...repositories, ...validators, ...mappers],
   controllers: [CreateUserController],
 })
 export class UsersModule {}
